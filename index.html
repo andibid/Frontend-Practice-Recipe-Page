@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Recipe page</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        margin: 0;
+      }
+      .container {
+        width: 100vw;
+        background-color: rgb(245, 220, 220);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 24px;
+        margin: 64px;
+      }
+      img {
+        border-radius: 8px;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      h1 {
+        color: rgb(47, 51, 53);
+      }
+      p,
+      ul,
+      ol,
+      .col1,
+      .col2 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 14px;
+        color: rgb(108, 92, 104);
+      }
+      .prep-card {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(253, 243, 245);
+        padding: 16px;
+        border-radius: 8px;
+      }
+      h3 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 18px;
+        color: rgb(159, 88, 108);
+        margin: 0;
+      }
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 24px;
+      }
+      li {
+        padding-left: 8px;
+        margin: 8px;
+      }
+      h2,
+      li::marker,
+      .col2 {
+        font-weight: 700;
+        color: rgb(152, 57, 57);
+      }
+      hr {
+        border: none;
+        margin: 24px 0px 24px 0px;
+        height: 1px;
+        background-color: #b6b7b8;
+      }
+      .nutri-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+      }
+      .col1 {
+        grid-column: 1;
+        grid-row: 1/5;
+      }
+      .col2 {
+        grid-column: 2;
+        grid-row: 1/5;
+      }
+
+      .cells {
+        padding: 8px 24px 8px 24px;
+      }
+
+      .cells + .cells {
+        border-top: 1px solid #b6b7b8;
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          display: flex;
+          flex-direction: column;
+          width: 100vw;
+          border-radius: 0;
+          margin: 0;
+          overflow: hidden;
+        }
+        img {
+          border-radius: 0;
+          margin: -24px -24px 0 -24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="assets\images\image-omelette.jpeg" alt="" />
+        <h1>Simple Omelette Recipe</h1>
+        <p>
+          An easy and quick dish, perfect for any meal. This classic omelette
+          combines beaten eggs cooked to perfection, optionally filled with your
+          choice of cheese, vegetables, or meats.
+        </p>
+        <div class="prep-card">
+          <h3>Preparation time</h3>
+          <ul>
+            <li><b>Total:</b> Approximately 10 minutes</li>
+            <li><b>Preparation:</b> 5 minutes</li>
+            <li><b>Cooking:</b> 5 minutes</li>
+          </ul>
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>
+            Optional fillings: cheese, diced vegetables, cooked meats, herbs
+          </li>
+        </ul>
+        <hr />
+        <h2>Instructions</h2>
+        <ol>
+          <li>
+            <b>Beat the eggs: </b>In a bowl, beat the eggs with a pinch of salt
+            and pepper until they are well mixed. You can add a tablespoon of
+            water or milk for a fluffier texture.
+          </li>
+          <li>
+            <b>Heat the pan: </b>Place a non-stick frying pan over medium heat
+            and add butter or oil.
+          </li>
+          <li>
+            <b>Cook the omelette: </b>Once the butter is melted and bubbling,
+            pour in the eggs. Tilt the pan to ensure the eggs evenly coat the
+            surface.
+          </li>
+          <li>
+            <b>Add fillings (optional): </b>When the eggs begin to set at the
+            edges but are still slightly runny in the middle, sprinkle your
+            chosen fillings over one half of the omelette.
+          </li>
+          <li>
+            <b>Fold and serve: </b>As the omelette continues to cook, carefully
+            lift one edge and fold it over the fillings. Let it cook for another
+            minute, then slide it onto a plate.
+          </li>
+          <li>
+            <b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.
+          </li>
+        </ol>
+        <hr />
+        <h2>Nutrition</h2>
+        <p>
+          The table below shows nutritional values per serving without the
+          additional fillings.
+        </p>
+        <div class="nutri-grid">
+          <div class="col1">
+            <div class="cells">Calories</div>
+            <div class="cells">Carbs</div>
+            <div class="cells">Protein</div>
+            <div class="cells">Fat</div>
+          </div>
+          <div class="col2">
+            <div class="cells">277kcal</div>
+            <div class="cells">0g</div>
+            <div class="cells">20g</div>
+            <div class="cells">22g</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--        
+          -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/andibid">andibid</a>.
+    </div>
+  </body>
+</html>
